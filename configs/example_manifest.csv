@@ -1,0 +1,9 @@
+filename,role,control_group,replicate_group,include_for_compensation,include_for_analysis,notes
+background_rep1.fcs,Control,Secondary-only background,background,Yes,Yes,Matched negative control
+background_rep2.fcs,Control,Secondary-only background,background,Yes,Yes,Matched negative control
+marker1_rep1.fcs,Control,Marker 1 single-primary control,marker_1,Yes,Yes,Marker 1 positive; marker 2 primary omitted
+marker1_rep2.fcs,Control,Marker 1 single-primary control,marker_1,Yes,Yes,Technical replicate
+marker2_rep1.fcs,Control,Marker 2 single-primary control,marker_2,Yes,Yes,Marker 2 positive; marker 1 primary omitted
+marker2_rep2.fcs,Control,Marker 2 single-primary control,marker_2,Yes,Yes,Technical replicate
+dapi_rep1.fcs,Control,DAPI-only,dapi,Yes,Yes,DAPI-only diagnostic control
+sample_01.fcs,Sample,,,No,Yes,Example biological sample

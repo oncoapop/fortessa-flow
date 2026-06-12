@@ -1,0 +1,54 @@
+{
+  "analysis_title": "Example three-colour Fortessa analysis",
+  "paths": {
+    "input_dir": "../data",
+    "manifest": "./example_manifest.csv",
+    "output_dir": "../results",
+    "flowjo_targets": null
+  },
+  "channels": {
+    "fsc_a": "FSC-A",
+    "fsc_h": "FSC-H",
+    "ssc_a": "SSC-A",
+    "dapi": "V 450/50-A",
+    "marker_1": "Blue 530/30-A",
+    "marker_2": "YG 586/15-A",
+    "time": "Time"
+  },
+  "labels": {
+    "dapi": "DAPI",
+    "marker_1": "Marker 1 AF488",
+    "marker_2": "Marker 2 AF568"
+  },
+  "control_groups": {
+    "background": "Secondary-only background",
+    "dapi": "DAPI-only",
+    "marker_1": "Marker 1 single-primary control",
+    "marker_2": "Marker 2 single-primary control"
+  },
+  "compensation": {
+    "pairs": [
+      { "source": "marker_1", "target": "marker_2" },
+      { "source": "marker_2", "target": "marker_1" }
+    ],
+    "maximum_accepted_coefficient": 0.2,
+    "maximum_replicate_ratio": 2.0
+  },
+  "gating": {
+    "time_trim_fraction": 0.005,
+    "scatter_mad_limit": 4.0,
+    "singlet_mad_limit": 3.5
+  },
+  "qc": {
+    "require_matching_voltages": true
+  },
+  "thresholds": {
+    "mode": "background_percentile",
+    "background_percentile": 0.99
+  },
+  "transforms": {
+    "dapi_cofactor": 1000,
+    "marker_1_cofactor": 100,
+    "marker_2_cofactor": 100
+  }
+}

@@ -1,0 +1,31 @@
+# Confidential/raw cytometry data
+*.fcs
+*.fcs3
+*.wsp
+*.jo
+
+# Local analysis data and outputs
+outputs/
+data/
+results/
+local_config.json
+*_private.csv
+*.xlsx
+~$*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# macOS and editors
+.DS_Store
+.vscode/
+.idea/
